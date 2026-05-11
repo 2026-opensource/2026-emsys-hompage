@@ -1,1 +1,101 @@
 /* 로그인/회원가입 페이지 전용 스타일 */
+
+html, body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #333333;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.login-box {
+    width: 600px;
+    min-height: 600px;
+    border: 3px solid #6c6c6c;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #333333;
+    text-align: center;
+    margin: 100px auto;
+    display: flex;
+}
+
+.signup-box {
+    width: 600px;
+    min-height: 850px;
+    border: 3px solid #6c6c6c;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #333333;
+    text-align: center;
+    margin: 100px auto;
+    display: flex;
+}
+
+.auth-content {
+    width: 100%;
+    text-align: center;
+}
+
+.auth-text {
+    font-size: 64px;
+    color: #00FFA9;
+    margin:50px auto 0px auto;
+    font-weight: 800;
+}
+
+.auth-subtext {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0px auto 30px auto;
+}
+
+.auth-form {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.input-box {
+    width: 530px;
+    padding: 15px 0px 15px 15px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #535151;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.input-box::placeholder {
+    width: 100%;
+    color: #d9d9d9;
+}
+
+.auth-btn {
+    width: 530px;
+    background-color: #00FFA9;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+a {
+    color: #00FFA9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
