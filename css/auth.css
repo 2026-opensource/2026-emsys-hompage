@@ -16,13 +16,17 @@ body {
     box-sizing: border-box;
 }
 
+.auth-content, .find-tabs {
+    width: 100%;
+    text-align: center;
+}
+
 .login-box {
     width: 600px;
     min-height: 600px;
     border: 3px solid #6c6c6c;
     border-radius: 10px;
     color: #ffffff;
-    background-color: #333333;
     text-align: center;
     margin: 100px auto;
     display: flex;
@@ -34,14 +38,18 @@ body {
     border: 3px solid #6c6c6c;
     border-radius: 10px;
     color: #ffffff;
-    background-color: #333333;
     text-align: center;
     margin: 100px auto;
     display: flex;
 }
 
-.auth-content {
-    width: 100%;
+.find-box {
+    width: 600px;
+    min-height: 600px;
+    border: 3px solid #6c6c6c;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -58,7 +66,7 @@ body {
     margin: 0px auto 30px auto;
 }
 
-.auth-form {
+.auth-form, .find-form {
     width: 100%;
     margin: 0px auto;
 }
@@ -79,23 +87,86 @@ body {
     color: #d9d9d9;
 }
 
-.auth-btn {
+.auth-btn, .find-btn {
     width: 530px;
     background-color: #00FFA9;
     border: none;
     padding-top: 15px;
     padding-bottom: 15px; 
     margin-top: 20px;
+    margin-bottom: 25px;
     font-size: 24px;
     font-weight: bold;
     border-radius: 10px;
 }
 
+.tab-content > .tab-pane { /* tab-pane 클래스는 기본적으로 숨김 처리 */
+    display: none;
+}
+
+.tab-content > .active { /* active 클래스가 있는 탭은 보이도록 설정 */
+    display: block;
+}
+
+.find-tabs {
+    width: 100%;
+    margin: 40px 0px 40px 0px;
+    border-bottom: none;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.find-tabs > li > a {
+    padding: 15px 30px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #535151;
+    background-color: #333333;
+    border: none;
+    border-radius: 0;
+    border-bottom: 5px solid #535151;
+}
+
+.find-tabs > li.active > a {
+    color: #00FFA9;
+    background-color: #333333;
+    border: none;
+    border-bottom: 5px solid #00FFA9;
+}
+
+.find-tabs > li.active > a,
+.find-tabs > li.active > a:hover,
+.find-tabs > li:not(.active) > a:hover,
+.find-tabs > li.active > a:focus {
+    color: #00FFA9;
+    background-color: #333333;
+    border: none;
+    border-bottom: 5px solid #00FFA9;
+    outline: none;
+}
+
+#find-id {
+    margin-top: 100px;
+}
+
+#find-pw {
+    margin-top: 50px;
+}
+
+.login-link, .signup-link, .find-link {
+    font-size: 18px;
+    color: #ffffff;
+}
+
 a {
+    font-size: 18px;
     color: #00FFA9;
     text-decoration: none;
 }
 
 a:hover {
+    font-size: 18px;
+    color: #00FFA9;
     text-decoration: underline;
 }

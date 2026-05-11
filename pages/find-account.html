@@ -1,0 +1,51 @@
+<!--로그인 페이지-->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/auth.css">
+    <title>EMSYS Find Account</title>
+</head>
+
+<body>
+    <section class="find-box">
+        <ul class="nav nav-tabs find-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#find-id">아이디 찾기</a> <!--아래 find-id로 연결됨-->
+            </li>
+            <li>
+                <a data-toggle="tab" href="#find-pw">비밀번호 찾기</a>
+            </li>
+        </ul>
+
+        <div class="tab-content find-content">
+            <div id="find-id" class="tab-pane fade in active">
+                <form class="find-form">
+                    <input class="input-box" type="text" placeholder="이름"><br>
+                    <input class="input-box" type="text" placeholder="학번"><br>
+                    <button class="find-btn" type="submit">아이디 찾기</button><br>
+                    <a href="login.html">로그인 하러 가기</a></p>
+                </form>
+            </div>
+
+            <div id="find-pw" class="tab-pane fade">
+                <form class="find-form">
+                    <input class="input-box" type="text" placeholder="이름"><br>
+                    <input class="input-box" type="text" placeholder="학번"><br>
+                    <input class="input-box" type="email" placeholder="아이디(이메일)"><br>
+                    <button class="find-btn" type="submit">비밀번호 찾기</button><br>
+                    <a href="login.html">로그인 하러 가기</a></p>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
