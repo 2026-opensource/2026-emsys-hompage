@@ -1,0 +1,278 @@
+/* ========================================
+   게시글 상세 페이지
+======================================== */
+
+/* 전체 컨테이너 */
+.detail-container {
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 50px;
+
+  border: 2px solid #5a5a5a;
+  border-radius: 20px;
+
+  background-color: #333333;
+}
+
+/* ========================================
+   상단 영역
+======================================== */
+
+/* 목록으로 */
+.back-link {
+  color: #00ffa9;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
+/* 목록 + 버튼 전체 */
+.detail-top-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 수정/삭제 버튼 영역 */
+.detail-top-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* 수정 버튼 */
+.edit-btn {
+  width: 100px;
+  height: 31px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #00ffa9;
+
+  color: black;
+
+  font-weight: 700;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  width: 100px;
+  height: 31px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: #ad0000;
+
+  color: white;
+
+  font-weight: 700;
+}
+
+/* ========================================
+   제목 영역
+======================================== */
+
+.detail-header {
+  margin-bottom: 40px;
+}
+
+/* 제목 + 카테고리 */
+.detail-title-area {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  padding-top: 30px;
+}
+
+/* 제목 */
+.detail-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* 작성 정보 */
+.detail-info {
+  color: #cfcfcf;
+  font-size: 15px;
+}
+
+/* ========================================
+   게시글 내용
+======================================== */
+
+.detail-content {
+  min-height: 300px;
+
+  padding: 40px 0;
+
+  border-top: 2px solid #5a5a5a;
+  border-bottom: 2px solid #5a5a5a;
+
+  line-height: 1.8;
+
+  font-size: 15px;
+}
+
+/* ========================================
+   좋아요 / 싫어요
+======================================== */
+
+.reaction-section {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 0;
+}
+
+.reaction-section button {
+  width: 140px;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  background-color: #5a5a5a;
+  color: white;
+  font-weight: 700;
+}
+
+.reaction-section button:hover {
+  border: 2px solid #00ffa9;
+  border-radius: 12px;
+}
+
+/* 반응 버튼 애니메이션 */
+.reaction-section button {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* 클릭 후 활성화 상태 */
+.reaction-section button.active {
+  background-color: #00ffa9;
+
+  color: black;
+
+  border: 2px solid #00ffa9;
+}
+
+/* ========================================
+   댓글 영역
+======================================== */
+
+.comment-section {
+  padding-top: 30px;
+
+  border-top: 2px solid #5a5a5a;
+}
+
+/* 댓글 제목 */
+.comment-title {
+  margin-bottom: 30px;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* 댓글 카드 */
+.comment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 30px;
+
+  border-bottom: 2px solid #5a5a5a;
+}
+
+/* 댓글 작성자 */
+.comment-writer {
+  margin-bottom: 10px;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* 댓글 내용 */
+.comment-text {
+  color: #dddddd;
+
+  font-size: 16px;
+}
+
+/* 댓글 수정 삭제 */
+.comment-actions {
+  display: flex;
+
+  gap: 12px;
+}
+
+/* 댓글 버튼 */
+.comment-actions button {
+  border: none;
+
+  background: none;
+
+  color: #dddddd;
+
+  font-size: 15px;
+}
+
+/* ========================================
+   댓글 입력 영역
+======================================== */
+
+.comment-input-section {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding-top: 30px;
+}
+
+/* 댓글 입력 */
+.comment-input {
+  flex: 1;
+
+  height: 60px;
+
+  padding: 0 24px;
+
+  border: 2px solid #5a5a5a;
+  border-radius: 999px;
+
+  background-color: transparent;
+
+  color: white;
+
+  font-size: 16px;
+}
+
+/* placeholder */
+.comment-input::placeholder {
+  color: #bdbdbd;
+}
+
+/* 댓글 등록 버튼 */
+.comment-submit-btn {
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #00ffa9;
+
+  color: black;
+
+  font-size: 24px;
+  font-weight: 700;
+}
