@@ -1,90 +1,27 @@
 /* 메인페이지 전용 스타일 */
-
 @charset "UTF-8";
 
-/* 다크모드 기준 색상 변수 */
 :root {
     --bg-main: #333333;
-    /* 전체 어두운 회색 배경 */
     --bg-box: #444444;
-    /* 푸터 등 박스 배경 */
     --text-main: #ffffff;
-    /* 기본 글자색 (흰색) */
     --text-muted: #aaaaaa;
-    /* 설명용 연한 회색 글자 */
     --point-mint: #00ffa3;
-    /* EMSYS 상징 민트색 */
     --border-color: #555555;
-    /* 연한 테두리 선 색상 */
-}
-
-body {
-    background-color: var(--bg-main);
-    color: var(--text-main);
-}
-
-.navbar-default {
-    background-color: var(--bg-box);
-    border: none;
-    margin-bottom: 0;
-    padding: 15px 0;
-}
-
-.navbar-default .navbar-brand {
-    color: var(--point-mint) !important;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: -2px;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: var(--text-main) !important;
-    font-size: 15px;
-    padding: 10px 15px;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
-    color: var(--point-mint) !important;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: var(--point-mint);
-}
-
-/* 토글 버튼 기본 상태 */
-.navbar-toggle {
-    background-color: transparent !important;
-    border-color: var(--point-mint);
-}
-
-/* 토글 버튼 hover 상태 */
-.navbar-toggle:hover {
-    background-color: rgba(0, 255, 163, 0.1) !important;
-}
-
-/* 토글 버튼 클릭/활성화 상태 */
-.navbar-toggle:focus,
-.navbar-toggle:active,
-.navbar-toggle.active {
-    background-color: transparent !important;
-    outline: none;
-}
-
-/* 토글 버튼의 바(icon-bar) 색상 유지 */
-.navbar-toggle .icon-bar {
-    background-color: var(--point-mint);
 }
 
 /* 메인 배너 */
 header {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--text-main);
+    color: black;
     text-align: center;
-    padding: 30px 0;
+    padding: 80px 0;
 }
 
-header img {
+.header-mascot {
     vertical-align: middle;
+    width: 200px;
+    height: auto;
 }
 
 header h2 {
@@ -92,6 +29,7 @@ header h2 {
     vertical-align: middle;
     text-align: left;
     margin-left: 20px;
+    font-size:32px;
     font-weight: bold;
     line-height: 1.5;
 }
@@ -99,7 +37,7 @@ header h2 {
 /* about & 자료실 */
 .about-section {
     padding: 30px 50px 50px 50px;
-    
+    background-color: var(--bg-main);
 }
 
 .section-divider {
@@ -126,31 +64,32 @@ header h2 {
     padding: 10px 20px;
 }
 
+.about-mascot {
+    width: 50px;
+    height: auto;
+    display: inline-block;
+    margin-right:10px;
+    margin-top:-8px;
+}
+
 .about-title {
     display: inline-block;
     font-weight: bold;
     color: var(--point-mint);
     margin-top:24px;
+    font-size:20px;
 }
 
 .title-group {
-    display: inline-block;  /* 추가 */
-    vertical-align: middle;  /* 추가 */
+    display: inline-block;
+    vertical-align: middle; 
 }
 
-.title-group i {
-    display: inline-block;  /* 추가 */
+.document-icon {
+    display: inline-block;
     color: var(--point-mint);
     font-size: 32px;
     margin-right: 12px;
-    margin-top:12px;
-}
-.title-group img{
-    display: inline-block;  /* 추가 */
-    color: var(--point-mint);
-    font-size: 32px;
-    margin-right: 0px;
-    margin-top:-8px;
 }
 
 .description-group {
@@ -185,7 +124,7 @@ header h2 {
     background-color: var(--bg-main);
 }
 
-.shortcut .section-divider .line {
+.shortcut .line {
     flex: 1;
     height: 1px;
     background-color: var(--border-color);
@@ -194,8 +133,7 @@ header h2 {
     margin-top: 8px;
 }
 
-.shortcut .section-divider .shortcut-text {
-    margin-right:20px;
+.shortcut .shortcut-text {
     font-size: 14px;
     font-weight: bold;
 }
@@ -230,11 +168,12 @@ header h2 {
 }
 
 .shortcut-item:hover i, .shortcut-item:hover h4 {
-    color: #ffffff; /* 호버 시 아이콘 흰색으로 */
+    color: #ffffff;
 }
 
 .board-preview{
     padding: 50px 0;
+    background-color: var(--bg-main);
 }
 
 .board-box{
@@ -251,7 +190,7 @@ header h2 {
 
 .plus-btn{
     color: var(--point-mint);
-    font-size: 18px;
+    font-size: 20px;
     transition: color 0.3s;
     cursor: pointer;
     margin-top:20px;
@@ -260,6 +199,7 @@ header h2 {
 .board-title{
     display:inline-block;
     color:var(--point-mint);
+    font-size:20px;
 
 }
 
@@ -272,8 +212,8 @@ header h2 {
 
 .board-list {
     list-style: none;
-    padding: 0;      /* 이게 핵심! */
-    margin: 0;       /* 이것도 추가 */
+    padding: 0;
+    margin: 0;     
 }
 
 .board-list li{
@@ -290,57 +230,10 @@ header h2 {
 .board-list li a {
     color: var(--text-main);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
 .board-list li a:hover {
     color: var(--point-mint);
 }
-
-.footer-section{
-    background-color: var(--bg-box);
-    color: var(--text-muted);
-    padding: 20px 0; 
-    color:var(--text-muted);  
-}
-
-.footer-section .col-md-6.text-right {
-    text-align: right;
-}
-
-.footer-description, .footer-description-contact {
-    color: var(--text-muted);
-    font-size: 14px;
-    line-height: 1.8;
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 0;
-    margin-right: 20px;  /* 텍스트와 아이콘 사이 간격 */
-}
-
-.footer-description-contact {
-    margin-top: 16px; /* 연락처 텍스트와 아이콘 사이 간격 */
-}
-
-.footer-socials {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 16px;
-}
-
-.footer-socials a {
-    color: var(--text-main);
-    font-size: 28px;
-    margin-left: 15px;
-    transition: color 0.3s;
-}
-
-.footer-socials a:first-child {
-    margin-left: 0;  /* 첫 번째 아이콘은 왼쪽 여백 없음 */
-}
-
-.footer-socials a:hover {
-    color: var(--point-mint);
-}
-
