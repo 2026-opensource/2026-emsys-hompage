@@ -23,15 +23,11 @@
 
 /* 제목 */
 .board-page-title {
-  width: fit-content;
-  margin: 0 auto;
   padding-bottom: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 64px;
   font-weight: 700;
   color: #00ffa9;
+  text-align: center;
 }
 
 /* 제목 아래 초록 선 */
@@ -57,7 +53,6 @@
 /* 검색 영역 */
 .board-search-area {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
@@ -96,9 +91,8 @@
   border-radius: 10px;
   background-color: #00ffa9;
   color: black;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 700;
-  transition: opacity 0.2s ease;
 }
 
 /* 버튼 hover */
@@ -149,9 +143,8 @@
 .board-category {
   width: 110px;
   height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  line-height: 40px;
+  text-align: center;
   border-radius: 10px;
   background-color: #d9d9d9;
   color: black;
