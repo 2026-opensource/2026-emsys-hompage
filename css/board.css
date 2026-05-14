@@ -1,22 +1,36 @@
-/* ========================================
-   게시판 공통 레이아웃
-======================================== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2e2e2e;
+  color: white;
+  font-family: "Pretendard", sans-serif;
+}
 
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*===================
+게시판 공통 레이아웃
+===================*/
 .board-page {
   padding-top: 60px;
   padding-bottom: 80px;
 }
 
-/* 가운데 컨테이너 */
 .board-container {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* ========================================
-   페이지 제목 영역
-======================================== */
-
+/*===================
+페이지 제목 영역
+===================*/
 .board-title-area {
   margin-bottom: 50px;
 }
@@ -39,48 +53,16 @@
   background-color: #00ffa9;
 }
 
-/* ========================================
-   상단 검색 / 버튼 영역
-======================================== */
-
-.board-top {
+/*===================
+메뉴 영역부터 본문 영역까지
+===================*/
+/* 전체 설정 */
+.board-main-area {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-/* 검색 영역 */
-.board-search-area {
-  display: flex;
-  gap: 12px;
-}
-
-/* 카테고리 선택 */
-.category-select {
-  width: 140px;
-  height: 42px;
-  padding: 0 12px;
-  border: none;
-  border-radius: 10px;
-  background-color: #5a5a5a;
-  color: white;
-}
-
-/* 검색창 */
-.search-input {
-  width: 240px;
-  height: 42px;
-  padding: 0 14px;
-  border: none;
-  border-radius: 10px;
-  background-color: #5a5a5a;
-  color: white;
-}
-
-/* placeholder */
-.search-input::placeholder {
-  color: #cfcfcf;
+  flex-wrap: wrap;
+  padding: 32px;
+  border: 1px solid #6c6c6c;
+  border-radius: 20px;
 }
 
 /* 글쓰기 버튼 */
@@ -93,18 +75,83 @@
   color: black;
   font-size: 20px;
   font-weight: 700;
+  margin-right: auto;
 }
 
-/* 버튼 hover */
 .write-btn:hover {
   opacity: 0.8;
 }
 
-/* ========================================
-   게시글 목록
-======================================== */
+/*------
+ 검색 영역
+ ------*/
+.board-search-area {
+  display: flex;
+  gap: 12px;
+}
 
+/* 카테고리 선택 */
+.board-category-select {
+  width: 140px;
+  height: 42px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #535151;
+  color: white;
+  font-size: 16px;
+}
+
+/*---
+검색창, 검색 아이콘(버튼)
+---*/
+.board-search-input {
+  width: 240px;
+}
+
+/* 검색창 */
+.search-input {
+  height: 42px !important;
+  border-radius: 10px 0 0 10px !important;
+  background-color: #535151;
+
+  color: white;
+  border: none;
+  box-shadow: none;
+}
+
+/* 검색 버튼*/
+.search-btn {
+  height: 42px;
+  border-radius: 0 10px 10px 0;
+  background-color: #535151;
+  border: none;
+  color: white;
+}
+
+.search-btn:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+/* 검색창, 검색 아이콘(버튼) 효과 */
+.search-input:hover,
+.board-category-select:hover {
+  background-color: #666;
+}
+
+.search-input:focus,
+.board-category-select:focus {
+  box-shadow: none !important;
+}
+
+/* ------
+본문 요소
+------ */
 .board-list {
+  width: 100%;
+  margin-top: 32px;
+
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -116,28 +163,20 @@
   text-decoration: none;
 }
 
-/* 게시글 카드 */
+/* 게시글 */
 .board-card {
   display: flex;
   align-items: center;
   gap: 30px;
   padding: 28px;
   border-radius: 18px;
-  background-color: #5a5a5a;
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease;
+  background-color: #535151;
+  transition: all 0.2s ease;
 }
 
-/* hover 효과 */
 .board-link:hover .board-card {
-  transform: translateY(-2px);
-  background-color: #666666;
+  background-color: #6c6c6c;
 }
-
-/* ========================================
-   게시글 내부 요소
-======================================== */
 
 /* 카테고리 */
 .board-category {
@@ -148,7 +187,7 @@
   border-radius: 10px;
   background-color: #d9d9d9;
   color: black;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -157,36 +196,26 @@
   flex: 1;
 }
 
-/* 제목 */
+/* 글 제목 */
 .board-title {
-  margin-bottom: 10px;
-  font-size: 30px;
+  margin: 10px 0;
+  font-size: 32px;
   font-weight: 700;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
-/* 내용 */
-.board-content {
-  margin-bottom: 12px;
-  color: #dddddd;
-  font-size: 16px;
-}
-
-/* 작성자 / 날짜 */
 .board-info {
-  margin: 0;
-  color: #bdbdbd;
-  font-size: 14px;
+  color: #9a9a9a;
 }
 
 /* 오른쪽 통계 */
-.board-stats {
+.board-stats p {
   min-width: 120px;
   text-align: right;
-}
-
-/* 통계 텍스트 */
-.board-stats p {
-  margin-bottom: 8px;
-  color: #f0f0f0;
-  font-size: 14px;
+  color: #ffffff;
+  font-size: 16px;
+  margin: 5px 0;
 }
