@@ -43,9 +43,8 @@ body {
     padding: 40px 20px;
 }
 
-.login-box,
-.signup-box,
-.find-box {
+.auth-box,
+.change-pw-box {
     min-width: 500px;
     min-height: 400px;
     border: 3px solid var(--border-color);
@@ -55,16 +54,15 @@ body {
     margin: 0px auto;
 }
 
-.login-text,
-.signup-text,
-.find-text {
+.auth-text,
+.change-pw-text {
     font-size: 64px;
     color: var(--point-mint);
     margin: 0px auto;
 }
 
-.login-subtext
-.signup-subtext {
+.auth-subtext,
+.change-pw-subtext {
     font-size: 20px;
     color: var(--text-main);
     margin: 10px 0px 30px 0px;
@@ -76,13 +74,19 @@ body {
     margin: 5px auto;
     color: var(--text-main);
     background-color: var(--bg-box);
-    border: none;
     border-radius: 10px;
+    border: 1px solid var(--text-muted);
     font-size: 16px;
 }
 
 .input-box::placeholder {
     color: var(--text-muted);
+}
+
+/* 크롬 자동으로 인한 배경색 바뀜 방지 */
+.input-box:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-box) inset; /* 배경색을 box-shadow 스타일로 덮어쓰기 */
+    -webkit-text-fill-color: var(--text-main);
 }
 
 .login-link,
@@ -92,9 +96,8 @@ body {
     margin: 10px 0px;
 }
 
-.login-btn,
-.signup-btn,
-.find-btn {
+.auth-btn,
+.change-pw-btn {
     width: 400px;
     background-color: var(--point-mint);
     color: #000000;
@@ -104,6 +107,13 @@ body {
     font-size: 20px;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.auth-btn:hover,
+.change-pw-btn:hover {
+    background-color: var(--point-mint);
+    opacity: 0.8;
 }
 
 a {
@@ -118,7 +128,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ID/PW찾기 페이지 스타일 */
+/* ID 찾기/PW 변경 페이지 스타일 */
 .find-tabs {
     width: 100%;
     border-bottom: none;
