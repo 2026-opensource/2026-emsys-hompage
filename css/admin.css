@@ -15,6 +15,7 @@ body{
 
 .container{
     padding:0 80px;
+    padding-bottom:60px;
 }
 
 .board-top {
@@ -48,6 +49,11 @@ body{
   border-radius: 10px;
   background-color: #5a5a5a;
   color: white;
+}
+
+.search-input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-box) inset;
+    -webkit-text-fill-color: var(--text-main);
 }
 
 .search-input::placeholder {
@@ -212,9 +218,23 @@ body{
     text-align: center;
 }
 
-.post-manage-header, .user-manage-header{
+.post-manage-header, .user-manage-title{
     color:var(--point-mint);
     text-align: left;
+    margin-bottom:0;
+}
+
+.user-manage-header{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.authority {
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .header-divider{
@@ -252,7 +272,7 @@ body{
 
 .user-list{
     overflow-y: auto;
-    max-height: 800px;
+    max-height: 450px;
 }
 
 .fa-graduation-cap{
