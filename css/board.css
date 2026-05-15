@@ -4,6 +4,7 @@ body {
   background-color: #2e2e2e;
   color: white;
   font-family: "Pretendard", sans-serif;
+  zoom: 0.9;
 }
 
 a,
@@ -19,8 +20,7 @@ a:active {
 게시판 공통 레이아웃
 ===================*/
 .board-page {
-  padding-top: 60px;
-  padding-bottom: 80px;
+  padding: 60px 0;
 }
 
 .board-container {
