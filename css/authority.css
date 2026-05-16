@@ -78,14 +78,10 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    background-color:var(--border-color);
+    background-color:var(--text-muted);
     border:2px solid var(--border-color);
-    font-weight: 400;
-    color:white;
+    font-weight: 500;
+    color:var(--bg-main);
 }
 
-.btn-default:hover{
-    border:2px solid var(--point-mint);
-    background-color:var(--border-color);
-    color:white;
-}
+
