@@ -21,8 +21,9 @@
 </head>
 
 <body>
+    <div id="header"></div>
     <section class="post-write-box">
-        <div class="container">
+        <div class="container write-container">
             <div class="board-header">
                 <h3 class="write-board-title">게시글 작성</h3>
                 <div class="board-button">
@@ -51,14 +52,12 @@
                 <form class="content-box">
                     <textarea class="content-input-box form-control post-content" id="summernote" placeholder="내용을 입력하세요." required></textarea>
                 </form>
-
             </div>
         </div>
 
     <!-- Summernote lite 버전 사용 -->
     <script src="../assets/summernote/summernote-lite.js"></script>
     <script src="../assets/summernote/summernote-ko-KR.js"></script>
-
     <script>
         $(document).ready(function () { // HTML 문서가 완전히 로드된 후에 실행
             $('#summernote').summernote({ // Summernote 에디터 초기화
@@ -81,7 +80,8 @@
             });
         });
     </script>
-
+    <div id="footer"></div>
+    <script src="../js/common.js"></script>
 </body>
 
 </html>

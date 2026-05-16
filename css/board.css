@@ -27,7 +27,6 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: "Pretendard", sans-serif;
-  zoom: 0.9;
 }
 
 a,
@@ -44,6 +43,7 @@ a:active {
 ===================*/
 .board-page {
   padding: 5% 4%;
+  zoom: 0.9;
 }
 
 .board-container {

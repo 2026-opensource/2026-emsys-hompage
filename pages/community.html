@@ -9,19 +9,20 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Pretendard 폰트-->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
     />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/board.css" />
   </head>
 
   <body>
+    <div id="header"></div>
     <!-- 메인 -->
     <main class="board-page">
       <div class="board-container">
@@ -34,7 +35,9 @@
         <!-- 메뉴 영역부터 본문 영역까지 -->
         <div class="board-main-area">
           <!-- 글쓰기 버튼 -->
-          <button type="button" class="write-btn">글쓰기</button>
+          <a href="./post-write.html">
+              <button type="button" class="write-btn">글쓰기</button>
+          </a>
 
           <!-- 검색 영역-->
           <div class="board-search-area">
@@ -110,8 +113,10 @@
         </div>
       </div>
     </main>
+    <div id="footer"></div>
 
     <!-- JS -->
     <script src="../js/board.js"></script>
+    <script src="../js/common.js"></script>
   </body>
 </html>
