@@ -1,1 +1,251 @@
-/* 커뮤니티, 자료실, 글쓰기, 글 상세 페이지 공통 스타일 */
+/* =========================
+   공통 색상 변수
+========================= */
+:root {
+  --bg-main: #333333;
+  /* 전체 어두운 회색 배경 */
+
+  --bg-box: #444444;
+  /* 푸터 등 박스 배경 */
+
+  --text-main: #ffffff;
+  /* 기본 글자색 (흰색) */
+
+  --text-muted: #aaaaaa;
+  /* 설명용 연한 회색 글자 */
+
+  --point-mint: #00ffa3;
+  /* EMSYS 상징 민트색 */
+
+  --border-color: #555555;
+  /* 연한 테두리 선 색상 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: "Pretendard", sans-serif;
+  zoom: 0.9;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*===================
+게시판 공통 레이아웃
+===================*/
+.board-page {
+  padding: 5% 4%;
+}
+
+.board-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/*===================
+페이지 제목 영역
+===================*/
+.board-title-area {
+  margin-bottom: 5%;
+}
+
+/* 제목 */
+.board-page-title {
+  padding-bottom: 1%;
+  font-size: clamp(32px, 6vw, 64px);
+  font-weight: 700;
+  color: var(--point-mint);
+  text-align: center;
+}
+
+/* 제목 아래 초록 선 */
+.title-line {
+  width: 100%;
+  height: 0.4vw;
+  min-height: 4px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background-color: var(--point-mint);
+}
+
+/*===================
+메뉴 영역부터 본문 영역까지
+===================*/
+.board-main-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  padding: 3%;
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+}
+
+/* 글쓰기 버튼 */
+.write-btn {
+  width: 10%;
+  min-width: 120px;
+  height: 42px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--point-mint);
+  color: black;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  margin-right: auto;
+}
+
+.write-btn:hover {
+  opacity: 0.8;
+}
+
+/*------
+검색 영역
+------*/
+.board-search-area {
+  display: flex;
+  gap: 2%;
+  width: 60%;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* 카테고리 선택 */
+.board-category-select {
+  width: 35%;
+  min-width: 120px;
+  height: 42px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--border-color);
+  color: var(--text-main);
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+
+/* 검색창 */
+.board-search-input {
+  width: 60%;
+  min-width: 180px;
+}
+
+/* 검색 input */
+.search-input {
+  height: 42px !important;
+  border-radius: 10px 0 0 10px !important;
+  background-color: var(--border-color);
+  color: var(--text-main);
+  border: none;
+  box-shadow: none;
+}
+
+/* 검색 버튼 */
+.search-btn {
+  height: 42px;
+  border-radius: 0 10px 10px 0;
+  background-color: var(--border-color);
+  border: none;
+  color: var(--text-main);
+}
+
+.search-btn:hover {
+  background-color: var(--text-muted);
+  color: #fff;
+}
+
+/* hover/focus */
+.search-input:hover,
+.board-category-select:hover {
+  background-color: var(--text-muted);
+}
+
+.search-input:focus,
+.board-category-select:focus {
+  box-shadow: none !important;
+}
+
+/*------
+본문 요소
+------*/
+.board-list {
+  width: 100%;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 게시글 */
+.board-card {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  padding: 3%;
+  border-radius: 18px;
+  background-color: var(--bg-box);
+  transition: all 0.2s ease;
+}
+
+.board-link:hover .board-card {
+  background-color: var(--border-color);
+}
+
+/* 카테고리 */
+.board-category {
+  width: 12%;
+  min-width: 80px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--text-muted);
+  color: black;
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 700;
+}
+
+/* 메인 영역 */
+.board-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 글 제목 */
+.board-title {
+  margin: 10px 0;
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 700;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-word;
+}
+
+/* 작성자 */
+.board-info {
+  color: var(--text-muted);
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+/* 오른쪽 통계 */
+.board-stats {
+  width: 15%;
+  min-width: 100px;
+}
+
+.board-stats p {
+  text-align: right;
+  color: var(--text-main);
+  font-size: clamp(12px, 1.5vw, 16px);
+  margin: 5px 0;
+}
