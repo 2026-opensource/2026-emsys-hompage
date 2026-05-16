@@ -127,7 +127,7 @@ a:active {
   padding: 0 12px;
   border: none;
   border-radius: 10px;
-  background-color: var(--border-color);
+  background-color: var(--bg-box);
   color: var(--text-main);
   font-size: clamp(14px, 1.5vw, 16px);
 }
@@ -142,7 +142,7 @@ a:active {
 .search-input {
   height: 42px !important;
   border-radius: 10px 0 0 10px !important;
-  background-color: var(--border-color);
+  background-color: var(--bg-box);
   color: var(--text-main);
   border: none;
   box-shadow: none;
@@ -152,20 +152,20 @@ a:active {
 .search-btn {
   height: 42px;
   border-radius: 0 10px 10px 0;
-  background-color: var(--border-color);
+  background-color: var(--bg-box);
   border: none;
   color: var(--text-main);
 }
 
 .search-btn:hover {
-  background-color: var(--text-muted);
+  background-color: var(--border-color);
   color: #fff;
 }
 
 /* hover/focus */
 .search-input:hover,
 .board-category-select:hover {
-  background-color: var(--text-muted);
+  background-color: var(--border-color);
 }
 
 .search-input:focus,
