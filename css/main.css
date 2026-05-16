@@ -10,6 +10,10 @@
     --border-color: #555555;
 }
 
+body{
+    zoom:0.9;
+}
+
 /* 메인 배너 */
 header {
     background-color: var(--text-main);
