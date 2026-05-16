@@ -3,6 +3,7 @@
 /* 전체 적용 */
 html,
 body {
+    zoom: 0.9;
     margin: 0;
     min-height: 100vh;
     background-color: #333333;
@@ -96,8 +97,7 @@ body {
     margin: 10px 0px;
 }
 
-.auth-btn,
-.change-pw-btn {
+.auth-btn {
     width: 400px;
     background-color: var(--point-mint);
     color: #000000;
@@ -111,7 +111,8 @@ body {
 }
 
 .auth-btn:hover,
-.change-pw-btn:hover {
+.auth-btn:focus,
+.auth-btn:active {
     background-color: var(--point-mint);
     opacity: 0.8;
 }
