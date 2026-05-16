@@ -21,41 +21,47 @@
 
 <body>
     <div id="header"></div>
-    <section class="auth-box">
-        <div class="auth-container">
-            <ul class="nav nav-tabs find-tabs">
-                <li class="active">
-                    <a data-toggle="tab" href="#find-id">아이디 찾기</a> <!--아래 find-id로 연결됨-->
-                </li>
-                <li>
-                    <a data-toggle="tab" href="#find-pw">비밀번호 변경</a>
-                </li>
-            </ul>
+    <div class="auth-page-wrapper">
+        <div class="auth-content-area">
+            <section class="auth-box">
+                <div class="auth-container">
+                    <ul class="nav nav-tabs find-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#find-id">아이디 찾기</a> <!--아래 find-id로 연결됨-->
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#find-pw">비밀번호 변경</a>
+                        </li>
+                    </ul>
 
-            <div class="tab-content find-content">
-                <div id="find-id" class="tab-pane fade in active">
-                    <form class="find-form">
-                        <input class="input-box" type="text" name="name" placeholder="이름" required><br>
-                        <input class="input-box" type="text" name="student-id" placeholder="학번" required><br>
-                        <button class="auth-btn" type="submit">아이디 찾기</button><br>
-                        <p class="login-link"><a href="login.html">로그인 페이지로 이동</a></p>
-                    </form>
-                </div>
+                    <div class="tab-content find-content">
+                        <div id="find-id" class="tab-pane fade in active">
+                            <form class="find-form">
+                                <input class="input-box" type="text" name="name" placeholder="이름" required><br>
+                                <input class="input-box" type="text" name="student-id" placeholder="학번" required><br>
+                                <button class="auth-btn" type="submit">아이디 찾기</button><br>
+                                <p class="login-link"><a href="login.html">로그인 페이지로 이동</a></p>
+                            </form>
+                        </div>
 
-                <div id="find-pw" class="tab-pane fade">
-                    <h2>사용자 정보 확인</h2>
-                    <form class="find-form" action="change-password.html"> <!-- 사용자 정보 확인 후 change-password.html로 이동 -->
-                        <input class="input-box" type="text" name="name" placeholder="이름" required><br>
-                        <input class="input-box" type="text" name="student-id" placeholder="학번" required><br>
-                        <input class="input-box" type="email" name="email" placeholder="아이디(이메일)" autocomplete="email"
-                            required><br>
-                        <button class="auth-btn" type="submit">비밀번호 변경하러 가기</button>
-                    </form>
-                    <p class="login-link"><a href="login.html">로그인 페이지로 이동</a></p>
+                        <div id="find-pw" class="tab-pane fade">
+                            <h2>사용자 정보 확인</h2>
+                            <form class="find-form" action="change-password.html">
+                                <!-- 사용자 정보 확인 후 change-password.html로 이동 -->
+                                <input class="input-box" type="text" name="name" placeholder="이름" required><br>
+                                <input class="input-box" type="text" name="student-id" placeholder="학번" required><br>
+                                <input class="input-box" type="email" name="email" placeholder="아이디(이메일)"
+                                    autocomplete="email" required><br>
+                                <button class="auth-btn" type="submit">비밀번호 변경하러 가기</button>
+                            </form>
+                            <p class="login-link"><a href="login.html">로그인 페이지로 이동</a></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
+
     <div id="footer"></div>
     <script src="../js/common.js"></script>
 </body>
