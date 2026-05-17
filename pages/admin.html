@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../css/admin.css" />
-    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/common.css" />
 </head>
 
 <body>
@@ -69,24 +69,24 @@
                                 </a>
                             </div>
                         </div>
-                        </div>
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">&laquo;</span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </section>
             </div>
 
@@ -121,10 +121,12 @@
                                             22 정수기
                                         </span>
                                         <i class="fa-solid fa-graduation-cap" id="g-icon"></i>
+                                        <i class="fa-solid fa-house" id="l-icon"></i>
 
                                         <ul class="dropdown-menu">
-                                            <li><a onClick="enrolledStudent('g-icon')">재학생</a></li>
-                                            <li><a onClick="graduatedStudent('g-icon')">졸업생</a></li>
+                                            <li><a onClick="enrolledStudent()">재학생</a></li>
+                                            <li><a onClick="graduatedStudent()">졸업생</a></li>
+                                            <li><a onClick="leaveStudent()">휴학생</a></li>
                                         </ul>
                                     </div>
                                     <button class="btn btn-danger btn-xs">퇴출</button>
@@ -179,12 +181,19 @@
     <div id="footer"></div>
 
     <script>
-        function graduatedStudent(iconID) {
-            document.getElementById(iconID).style.display = "inline-block";
+        function graduatedStudent() {
+            document.getElementById('g-icon').style.display = "inline-block";
+            document.getElementById('l-icon').style.display = "none";
         }
 
-        function enrolledStudent(iconID) {
-            document.getElementById(iconID).style.display = "none";
+        function enrolledStudent() {
+            document.getElementById('g-icon').style.display = "none";
+            document.getElementById('l-icon').style.display = "none";
+        }
+
+        function leaveStudent() {
+            document.getElementById('g-icon').style.display = "none";
+            document.getElementById('l-icon').style.display = "inline-block";
         }
     </script>
 

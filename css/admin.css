@@ -279,8 +279,12 @@ body{
     max-height: 450px;
 }
 
-.fa-graduation-cap{
+.fa-graduation-cap, .fa-house{
     display:inline-block;
     margin-left:5px;
     color: yellow;
+}
+
+#g-icon, #l-icon{
+    display: none;
 }
